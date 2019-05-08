@@ -1,0 +1,67 @@
+
+.leftheader{
+    float: left;
+}
+.rightheader{
+    float: right;
+}
+.look{
+    padding: 100px;
+}
+.headerlook{
+    padding: 20px;
+    height: 90px;
+    background-color: rgb(229, 226, 226);
+    border-top: 3px solid grey;
+    border-bottom: 3px solid grey;
+}
+.sectionOneData{
+    margin-top: 20px;
+    float: right;
+}
+.SellerData1, .BuyerData1{
+    margin-top: 50px;
+    float: left;
+}
+.labelbig1, .label1, .Line1{
+    text-align: center;
+    background-color: lightgrey;
+    padding: 5px;
+    color:black;
+    margin: 0;
+}
+.SectionThree,.SectionFour,.Sectionfive,.Sectionsix{
+    border: 3px solid grey;
+}
+.label1,.labelbig1{
+    border-right: 3px solid grey;
+}
+.labelbigtext1, .labeltext1, .Linedata1{
+    text-align: center;
+    background-color: white;
+    padding: 15px 5px 15px 5px;
+    color:black;
+    margin: 0;
+    border-right: 3px solid grey;
+    font-size:20px;
+}
+.labelsmall{
+    padding: 10px 0px 10px 0px;
+}
+.fontbold{
+    font-weight: bold;
+}
+.Sectionseven{
+    margin-top: 20px;
+}
+.Sectioneight{
+    margin-top: 100px;
+}
+.dotted{
+    border:1px dotted black;
+    height: 1px;
+    width: 100%;
+}
+.center{
+    text-align: center;
+}

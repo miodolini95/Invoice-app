@@ -1,0 +1,22 @@
+body{
+
+}
+.App{
+  display: inline-block;
+  padding: 50px;
+}
+.none{
+  display: none;
+}
+.block{
+  display: block;
+}
+.positionfixed{
+  font-weight: bold;
+  font-size: 0.8vw;
+  width: 10vw;
+  position: fixed;
+  top:30px;
+  left:45%;
+  z-index: 1000;
+}

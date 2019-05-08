@@ -1,0 +1,39 @@
+.inputx input, .inputx select{
+    width: 100%;
+    margin-bottom: 5px;
+}
+.inputx textarea{
+    padding: 5px;
+}
+.labeltextlabel{
+    padding: 10px;
+    color: aliceblue;
+}
+.labelbig, .label{
+    text-align: center;
+    background-color: blue;
+}
+.SellerData input, .TargetData input{
+    margin-bottom: 5px;
+}
+.TargetData, .SellerData{
+    margin-left: 5px;
+}
+.textarea{
+    min-height: 40px;
+    width: 100%;
+}
+.blank{
+    height: 60px;
+    width: 100%;
+}
+.TotalText{
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 70px;
+    padding-top: 10px;
+}
+.generatebutton{
+    width: 100%;
+    height: 50%;
+}
