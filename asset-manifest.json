@@ -1,13 +1,13 @@
 {
   "main.css": "/Invoice-app/static/css/main.75d3c466.chunk.css",
-  "main.js": "/Invoice-app/static/js/main.6a6d767c.chunk.js",
-  "main.js.map": "/Invoice-app/static/js/main.6a6d767c.chunk.js.map",
+  "main.js": "/Invoice-app/static/js/main.96f41a59.chunk.js",
+  "main.js.map": "/Invoice-app/static/js/main.96f41a59.chunk.js.map",
   "static/js/1.dd11a4df.chunk.js": "/Invoice-app/static/js/1.dd11a4df.chunk.js",
   "static/js/1.dd11a4df.chunk.js.map": "/Invoice-app/static/js/1.dd11a4df.chunk.js.map",
   "runtime~main.js": "/Invoice-app/static/js/runtime~main.979c1cd1.js",
   "runtime~main.js.map": "/Invoice-app/static/js/runtime~main.979c1cd1.js.map",
   "static/css/main.75d3c466.chunk.css.map": "/Invoice-app/static/css/main.75d3c466.chunk.css.map",
   "index.html": "/Invoice-app/index.html",
-  "precache-manifest.496e3b9cbdab7fc77c232496073cbcad.js": "/Invoice-app/precache-manifest.496e3b9cbdab7fc77c232496073cbcad.js",
+  "precache-manifest.4c753de09969f261969d7698024d39fd.js": "/Invoice-app/precache-manifest.4c753de09969f261969d7698024d39fd.js",
   "service-worker.js": "/Invoice-app/service-worker.js"
 }
