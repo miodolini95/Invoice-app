@@ -65,7 +65,7 @@ class App extends Component {
   showinvoice = () =>{
     this.state.classnonelook === "none"? this.setState({classnonelook: "block"}) : this.setState({classnonelook: "none"})
     this.state.classnoneapp === "block"? this.setState({classnoneapp: "none blocknone"}) : this.setState({classnoneapp: "block"})
-    this.state.buttontext === "Zobacz Fakture"? this.setState({buttontext: "Powrot"}) : this.setState({buttontext: "Zobacz Fakture"})
+    this.state.buttontext === "Zobacz Fakture"? this.setState({buttontext: "chuj"}) : this.setState({buttontext: "Zobacz Fakture"})
   }
 
   generate = () => {
