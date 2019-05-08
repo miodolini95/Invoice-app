@@ -9,15 +9,25 @@ class Look extends Component {
   generateinlook = () =>{
     window.innerWidth = "1500px"
     window.innerHeight = "2000px"
+
     html2canvas(document.querySelector(".look"))
     .then((canvas) => {
       const imgData = canvas.toDataURL('image/png');
-      var pdf = new jsPDF({
-        orientation: 'landscape',
-        unit: 'in',
-        format: [1000, 1000]
-      })
-      
+      if (window.screen.width >= 1024 && window.screen.height >= 768) {
+        var pdf = new jsPDF({
+          orientation: 'landscape',
+          unit: 'in',
+          format: [1000, 1000]
+        })
+      }
+      else
+      {
+        var pdf = new jsPDF({
+          orientation: 'landscape',
+          unit: 'in',
+          format: [3000, 3000]
+        })
+      }
       pdf.addImage(imgData, 'PNG', 0, 0);
       pdf.save("download.pdf");  
     });
