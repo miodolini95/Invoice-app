@@ -14,7 +14,7 @@ class Look extends Component {
       const imgData = canvas.toDataURL('image/png');
       var pdf = new jsPDF({
         orientation: 'landscape',
-        unit: 'px',
+        unit: 'in',
         format: [1000, 1000]
       })
       
