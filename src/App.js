@@ -18,7 +18,7 @@ class App extends Component {
     eightline: {feedback:'', extrafeedback:''},
     classnonelook: "none",
     classnoneapp: "block",
-    buttontext: "Podgląd faktury",
+    buttontext: "Zobacz Fakture",
     look : React.createRef()
   }
   componentDidMount = () =>{
@@ -65,7 +65,7 @@ class App extends Component {
   showinvoice = () =>{
     this.state.classnonelook === "none"? this.setState({classnonelook: "block"}) : this.setState({classnonelook: "none"})
     this.state.classnoneapp === "block"? this.setState({classnoneapp: "none blocknone"}) : this.setState({classnoneapp: "block"})
-    this.state.buttontext === "Podgląd faktury"? this.setState({buttontext: "Powrot"}) : this.setState({buttontext: "Podgląd faktury"})
+    this.state.buttontext === "Zobacz Fakture"? this.setState({buttontext: "Powrot"}) : this.setState({buttontext: "Zobacz Fakture"})
   }
 
   generate = () => {
