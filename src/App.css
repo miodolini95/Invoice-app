@@ -10,6 +10,8 @@ body{
 }
 .block{
   display: block;
+  width:90%;
+  float:right;
 }
 .positionfixed{
   font-weight: bold;

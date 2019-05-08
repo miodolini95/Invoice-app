@@ -1,0 +1,8 @@
+.Menu{
+    height: 100%;
+    width: 10%;
+    position: fixed;
+    background: #007bff;
+    padding: 1%;
+    text-align: center;
+}

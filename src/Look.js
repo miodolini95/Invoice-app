@@ -116,7 +116,7 @@ class Look extends Component {
                 <span>Razem</span>
             </div>
             <div className="col-lg-1 labeltext1">
-                <span>{this.props.state.pricenetto}</span>
+                <span>{this.props.state.pricenetto}zł</span>
             </div>
             <div className="col-lg-1 labeltext1">
                 <span className="fontbold">{this.props.state.totalnetto}</span>
@@ -138,7 +138,7 @@ class Look extends Component {
                 <span>W tym</span>
             </div>
             <div className="col-lg-1 labeltext1">
-                <span>{this.props.state.pricenetto}</span>
+                <span>{this.props.state.pricenetto}zł</span>
             </div>
             <div className="col-lg-1 labeltext1 labelsmall">
                 <span className="fontbold">{this.props.state.totalnetto}</span>

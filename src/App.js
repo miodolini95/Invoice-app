@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MainPage from "./components/mainpage";
 import Look from './Look';
+import Menu from './Menu';
 import './App.css';
 
 class App extends Component {
@@ -32,7 +33,6 @@ class App extends Component {
 
     let totalnetto = parseFloat(amount) * parseFloat(pricenetto) + "zł"
 
-
     totalnetto = parseFloat(totalnetto)
     
     this.setState({
@@ -59,7 +59,7 @@ class App extends Component {
 
     name === "pricenetto"?this.setState({[name]: Math.round(value * 100) / 100 },() =>{amountchange()}):this.setState({[name]: value},() =>{amountchange()})
   }
-  changenone = () =>{
+  showinvoice = () =>{
     this.state.classnonelook === "none"? this.setState({classnonelook: "block"}) : this.setState({classnonelook: "none"})
     this.state.classnoneapp === "block"? this.setState({classnoneapp: "none"}) : this.setState({classnoneapp: "block"})
     this.state.buttontext === "Zobacz Fakture"? this.setState({buttontext: "Powrot"}) : this.setState({buttontext: "Zobacz Fakture"})
@@ -78,12 +78,15 @@ class App extends Component {
               value={this.state.value}
               change={this.handleChange}/>
         </div>
-        <button onClick={this.changenone.bind(this)} className="positionfixed btn btn-succes">{this.state.buttontext}</button>
         <div className={this.state.classnonelook}>
           <Look 
               state={this.state}
           />
         </div>
+          <Menu 
+              showinvoice={this.showinvoice}
+              buttontext={this.state.buttontext}
+          />
       </div>
     );
   }
