@@ -15,7 +15,7 @@ class EithLine extends React.Component {
                 </div>  
                 <div className="NameSurname inputx col-lg-3">
                     <h3>Wygeneruj Fakture</h3>
-                    <button className="btn btn-primary generatebutton">Generuj</button>
+                    <button className="btn btn-primary generatebutton" onClick={this.props.generate}>Generuj</button>
                 </div>  
             </div>
       );

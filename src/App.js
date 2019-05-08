@@ -18,7 +18,8 @@ class App extends Component {
     eightline: {feedback:'', extrafeedback:''},
     classnonelook: "none",
     classnoneapp: "block",
-    buttontext: "Zobacz Fakture"
+    buttontext: "Zobacz Fakture",
+    look : React.createRef()
   }
   componentDidMount = () =>{
     this.setState({
@@ -52,6 +53,7 @@ class App extends Component {
     })
     
   }
+
   handleChange = (e) => {
     const name = e.target.name
     let value  = e.target.value
@@ -59,11 +61,16 @@ class App extends Component {
 
     name === "pricenetto"?this.setState({[name]: Math.round(value * 100) / 100 },() =>{amountchange()}):this.setState({[name]: value},() =>{amountchange()})
   }
+
   showinvoice = () =>{
     this.state.classnonelook === "none"? this.setState({classnonelook: "block"}) : this.setState({classnonelook: "none"})
-    this.state.classnoneapp === "block"? this.setState({classnoneapp: "none"}) : this.setState({classnoneapp: "block"})
+    this.state.classnoneapp === "block"? this.setState({classnoneapp: "none blocknone"}) : this.setState({classnoneapp: "block"})
     this.state.buttontext === "Zobacz Fakture"? this.setState({buttontext: "Powrot"}) : this.setState({buttontext: "Zobacz Fakture"})
   }
+
+  generate = () => {
+    this.state.look.current.generateinlook();
+  };
   
   render() {
     return (
@@ -76,13 +83,15 @@ class App extends Component {
               topay = {this.state.topay}
               totalnetto={this.state.totalnetto}
               value={this.state.value}
-              change={this.handleChange}/>
+              change={this.handleChange}
+              generate={this.generate}/>
         </div>
-        <div className={this.state.classnonelook}>
-          <Look 
-              state={this.state}
-          />
-        </div>
+          <div className={this.state.classnonelook}>
+            <Look 
+                ref={this.state.look}
+                state={this.state}
+            />
+          </div>
           <Menu 
               showinvoice={this.showinvoice}
               buttontext={this.state.buttontext}

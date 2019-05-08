@@ -5,7 +5,8 @@ import './look.css';
 
 class Look extends Component {
 
-  lol = () =>{
+
+  generateinlook = () =>{
     html2canvas(document.querySelector(".look"))
     .then((canvas) => {
       const imgData = canvas.toDataURL('image/png');
@@ -20,13 +21,12 @@ class Look extends Component {
     });
   }
 
-
   render() {
     return (
       <div className="look">
         <div className="headerlook">
           <div className="leftheader">
-            <h2 onClick={this.lol}>Faktura</h2>
+            <h2 >Faktura</h2>
           </div>
           <div className="rightheader">
             <h2>numer: {this.props.state.numberofinvoice}</h2>

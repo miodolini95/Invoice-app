@@ -3,6 +3,7 @@
     background-color: lightgrey;
     float: left;
     padding: 10px;
+    z-index: 1000;
 }
 .inputx{
     padding: 10px;

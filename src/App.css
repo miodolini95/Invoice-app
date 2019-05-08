@@ -4,12 +4,20 @@
   padding: 50px;
 }
 .none{
-  display: none;
+  position: absolute;
+  z-index: 0;
+  width:90%;
+  float:right;
 }
 .block{
+  position: relative;
+  z-index: 1000;
   display: block;
   width:90%;
   float:right;
+}
+.blocknone{
+  display: none;
 }
 .positionfixed{
   font-weight: bold;

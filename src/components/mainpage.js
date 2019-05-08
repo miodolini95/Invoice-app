@@ -44,6 +44,7 @@ class MainPage extends React.Component {
                     change={this.props.change}
                 />
                 <EithLine 
+                    generate={this.props.generate}
                     value={this.props.value} 
                     change={this.props.change}                
                 />
