@@ -5,7 +5,7 @@ class Menu extends React.Component {
     render(){
         return (
             <div className="Menu">
-                <button onClick={this.props.showinvoice} className="Menubutton btn btn-success">{this.props.buttontext}</button>
+                <button onClick={this.props.showinvoice} className="Menubutton btn btn-success btn-block">{this.props.buttontext}</button>
             </div>
         );
     }
