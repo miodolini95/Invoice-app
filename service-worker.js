@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/Invoice-app/precache-manifest.a286cfacbc96c7b81bb5f93ea60a2eed.js"
+  "/Invoice-app/precache-manifest.d1fa599bfe9c0edce58c7c0ce447c2fe.js"
 );
 
 workbox.clientsClaim();
