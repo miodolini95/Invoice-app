@@ -25,7 +25,7 @@ class Look extends Component {
         var pdf = new jsPDF({
           orientation: 'landscape',
           unit: 'in',
-          format: [3000, 2999]
+          format: [2000, 2000]
         })
       }
       pdf.addImage(imgData, 'PNG', 0, 0);
