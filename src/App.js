@@ -2,11 +2,14 @@ import React, { Component } from 'react';
 import MainPage from "./components/mainpage";
 import Look from './Look';
 import Menu from './Menu';
+import List from './List/invoicelist';
 import './App.css';
 
 class App extends Component {
   state = {
     value: '',
+    startobj: {},
+    object: {},
     name: '',
     firstLine: {typeofdocument: '', numberofinvoice: '', dateofmake: ''},
     secondline: {languages: '', secondlanguages:'', placeofonvoice:'',dateofsell:''},
@@ -15,12 +18,26 @@ class App extends Component {
     fifthline: {nameofsell:'', typeofsell:'', amount:0, pricenetto:0, totalnetto:0,topay:0,percentagevat1:0,percentagevattext1:0,vat:0},
     sixthline: {state: '', amountpayed:'',dateofpay:'',paycomment:'' },
     seventhline: {paymantway:'', paymantday:'',account:''},
-    eightline: {feedback:'', extrafeedback:''},
+    eightline: {feedback:'', name:''},
+    id : 0,
+    look : React.createRef(),
+    invoicelist : new Array(),
+    classnonelist: "none",
     classnonelook: "none",
     classnoneapp: "block",
     buttontext: "Zobacz Fakture",
-    look : React.createRef()
   }
+
+  pushtolist = () =>{
+    let invoicelist = this.state.invoicelist
+    let object = this.state.object
+    let id = this.state.id
+    this.setState({
+        id: id + 1,
+        object: this.state,
+    },()=>{invoicelist.push(this.state.object)});
+  }
+
   componentDidMount = () =>{
     this.setState({
       percentagevat1: 0,
@@ -62,10 +79,28 @@ class App extends Component {
     name === "pricenetto"?this.setState({[name]: Math.round(value * 100) / 100 },() =>{amountchange()}):this.setState({[name]: value},() =>{amountchange()})
   }
 
-  showinvoice = () =>{
-    this.state.classnonelook === "none"? this.setState({classnonelook: "block"}) : this.setState({classnonelook: "none"})
-    this.state.classnoneapp === "block"? this.setState({classnoneapp: "none blocknone"}) : this.setState({classnoneapp: "block"})
-    this.state.buttontext === "Zobacz Fakture"? this.setState({buttontext: "Powrot"}) : this.setState({buttontext: "Zobacz Fakture"})
+  showlist = () =>{
+    this.setState({
+      classnonelist: "block",
+      classnonelook: "none",
+      classnoneapp: "none"
+    })
+  }
+
+  showapp = () =>{
+    this.setState({
+      classnonelist: "none",
+      classnonelook: "none",
+      classnoneapp: "block"
+    })
+  }
+
+  showlook = () =>{
+    this.setState({
+      classnonelist: "none",
+      classnonelook: "block",
+      classnoneapp: "none"
+    })
   }
 
   generate = () => {
@@ -75,6 +110,12 @@ class App extends Component {
   render() {
     return (
       <div>
+        <div className={this.state.classnonelist}>
+          <List 
+            object={this.state.object}
+            list ={this.state.invoicelist}
+          />
+        </div>
         <div className={this.state.classnoneapp}>
           <MainPage
               state = {this.state}
@@ -93,7 +134,10 @@ class App extends Component {
             />
           </div>
           <Menu 
-              showinvoice={this.showinvoice}
+              showlook = {this.showlook}
+              showapp = {this.showapp}
+              showlist = {this.showlist}
+              pushtolist = {this.pushtolist}
               buttontext={this.state.buttontext}
           />
       </div>

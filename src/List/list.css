@@ -1,0 +1,19 @@
+
+.listcontainer{
+    margin-left:auto;
+    margin-right: auto;
+    background-color: ;
+}
+.list{
+    padding: 5%;
+    margin: 0;
+}
+.item{
+    background-color: #99ff99;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    padding: 1em;
+}
+.item:nth-child(){
+    border: 2px solid #007bff;
+}

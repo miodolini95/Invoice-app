@@ -10,8 +10,8 @@ class EithLine extends React.Component {
                     <input type="text" value={this.props.feedback} onChange={this.props.change} name="feedback"></input>
                 </div>    
                 <div className="NameSurname inputx col-lg-3">
-                    <h3>Uwagi dodatkowe</h3>
-                    <input type="text" value={this.props.extrafeedback} onChange={this.props.change} name="extrafeedback"></input>
+                    <h3>Nazwa faktury</h3>
+                    <input type="text" value={this.props.name} onChange={this.props.change} name="name"></input>
                 </div>  
                 <div className="NameSurname inputx col-lg-3">
                     <h3>Wygeneruj Fakture</h3>
