@@ -5,7 +5,7 @@
   "homepage": "https://miodolini95.github.io/Invoice-app/",
   "dependencies": {
     "gh-pages": "^2.0.1",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.5.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.0"
